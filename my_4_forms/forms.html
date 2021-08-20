@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+	<link href="css/forms.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="wrapper">
+		<section>
+			<h1>Alien Abduction Order Form</h1>
+			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+			<br>
+
+			<!--this is the form start-->
+			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SE" method="POST"><!--action is the link from the back end, get is through URL, POST is behind the scences meaning hidden-->
+				<input type="hidden" name="send_to" value="jen@jenkramer.org"><!--name is pregiven, value is the the email used or provided, there is no label so theres no need foran id-->
+
+				<fieldset><!--this splits forms into sections-->
+					<legend>Your contact information</legend>
+					<label for="name">Your name</label>
+						<input type ="text" id="name" name ="name">
+					<Label for="phone">Phone number</label>
+						<input type ="tel" id ="phone" name="phone" placeholder="Define Reginal or Area Code!"><!--placeholder allows input of text-->
+					<label for ="email">Email</label>
+						<input type="email" id="email" name="email">
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>About your abduction</legend>
+					<label for="date">Requested  date</label>
+						<input type ="date" id="date" name="date">
+					<label for="qty">How many people would you like abducted?</label>
+						<input type="number" id="qty" name="qty" min="1" max="10"><!--qty means quantity-->
+
+					<p>What type of UFO do you prefer?</p>
+					<label><!--when using radio buttons the name tag has to be the same-->
+						<input type="radio" name="ufotype" value="classic" checked>Classic oval UFO
+					</label><!--checked allows to be choosen by default-->
+					<label>
+						<input type="radio" name="ufotype" value="starwars">Star Wars-style Imperial cruiser
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="galactica">Battlestar Galactica-style Viper
+					</label>
+					<label>
+						<input type="radio" name="ufotype" value="borg">Borg-style cube
+					</label>
+						
+					<label for="abtype">What type of abduction experience do you want?</label>
+					<!--when using a drop down menu to select 1 option-->
+					<select id="abtype" name="abtype">
+						<option selected> select one...</option><!--selected allows to be choosen by default-->
+						<option value="tour">Tour of the solar system</option>
+						<option value="dinner">Alien dinner and discussion</option>
+						<option value="dance">Alien dance lessons</option>
+						<option value="whales">Whale watching</option>
+						<!--select always has an option type and a value-->
+					</select>
+					
+					<!--comments-->
+					<label for="comments">Special requests:</label>
+						<textarea id="comments" name="comments" placeholder="write comments here"></textarea>
+
+					<!--emailing-->
+					<label>
+						<input type="checkbox" value="subscribe" name="subscribe" checked> Add me to your email list!
+					</label>
+				</fieldset>
+				<!--button to send information-->
+				<button type="submit">Submit<!--any information can be put here--></button>
+			</form>
+			<!--this is the form end-->				
+		</section>
+		<aside>
+			<h3>Our Location</h3>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.3196148455777!2d-93.2730096849948!3d44.97781797909824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f63b92a9636401%3A0xf1a376ecca3304c0!2sMJG%20International!5e0!3m2!1sen!2suk!4v1629466955914!5m2!1sen!2suk" width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+		</aside>
+	</div>
+	<script src="js/forms.js"></script>
+	<!--this links to the javascript form-->
+</body>
+</html>
+
+
+
+
+
